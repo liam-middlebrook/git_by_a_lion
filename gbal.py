@@ -4,6 +4,34 @@ import pygal
 import pprint
 import sys
 
+def generate_html():
+    html_string = """
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- ... -->
+  </head>
+  <body>
+    <figure>
+      <embed type="image/svg+xml" src="/author_tot_knowledge.svg" />
+    </figure>
+    <figure>
+      <embed type="image/svg+xml" src="/author_tot_risk.svg" />
+    </figure>
+    <figure>
+      <embed type="image/svg+xml" src="/file_tot_knowledge.svg" />
+    </figure>
+    <figure>
+      <embed type="image/svg+xml" src="/file_tot_risk.svg" />
+    </figure>
+  </body>
+</html>
+"""
+
+    with open("index.html", "w+") as text_file:
+        text_file.write(html_string)
+
+
 def generate_pie(data, title, stat_str, out_file):
     list_data = []
     for name, stats in data.iteritems():
@@ -89,6 +117,8 @@ def main():
         "tot_risk",
         "file_tot_risk.svg"
     )
+
+    generate_html()
 
 if __name__ == "__main__":
     main()
