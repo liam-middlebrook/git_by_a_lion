@@ -13,16 +13,16 @@ def generate_html():
   </head>
   <body>
     <figure>
-      <embed type="image/svg+xml" src="/author_tot_knowledge.svg" />
+      <embed type="image/svg+xml" src="author_tot_knowledge.svg" />
     </figure>
     <figure>
-      <embed type="image/svg+xml" src="/author_tot_risk.svg" />
+      <embed type="image/svg+xml" src="author_tot_risk.svg" />
     </figure>
     <figure>
-      <embed type="image/svg+xml" src="/file_tot_knowledge.svg" />
+      <embed type="image/svg+xml" src="file_tot_knowledge.svg" />
     </figure>
     <figure>
-      <embed type="image/svg+xml" src="/file_tot_risk.svg" />
+      <embed type="image/svg+xml" src="file_tot_risk.svg" />
     </figure>
   </body>
 </html>
