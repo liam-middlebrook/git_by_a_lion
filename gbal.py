@@ -56,7 +56,9 @@ def file_stat(data, stat_str):
     file_list = data["files"]
 
     for f in file_list:
-        stat_data.append((f["name"], f[stat_str]))
+        # not all files have stats
+        if stat_str in f:
+            stat_data.append((f["name"], f[stat_str]))
     for f_dir in data["dirs"]:
         stat_data.extend(file_stat(f_dir, stat_str))
 
